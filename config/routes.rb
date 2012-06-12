@@ -1,15 +1,23 @@
 Papermint::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/help"
+  root to: 'users#new'
+
+  #get "static_pages/home"
+  #get "static_pages/help"
 
   resources :tasks
-
   resources :users
-  resource :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create, :destroy]
 
+  # static_pages
+  match '/help',    to: 'static_pages#help'
+
+  # users
   match '/signup',  to: 'users#new'
+
+  # sessions
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
