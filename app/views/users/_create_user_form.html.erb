@@ -1,3 +1,4 @@
+<div class="create_user_form">
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -31,8 +32,9 @@
       <%= f.password_field :password_confirmation %>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit '新規登録' %>
     </div>
 
   </fieldset>
 <% end %>
+</div>
