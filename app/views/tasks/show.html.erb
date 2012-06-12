@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @task.content %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @task.user_id %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @task.priority %>
+</p>
+
+<p>
+  <b>Limit date:</b>
+  <%= @task.limit_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
