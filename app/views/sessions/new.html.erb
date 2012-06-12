@@ -1,23 +1,26 @@
+<h1>ログイン</h1>
+
 <div class="login_form">
   <% if flash[:alert] %>
     <p id="notice"><%= flash[:alert] %></p>
   <% end %>
+
 
   <%= form_tag sessions_path do %>
     <fieldset>
       <legend>ログインしてください</legend>
 
       <div class="field">
-        <%= label_tag :email, 'メールアドレス:' %>
+        <%= label_tag :email, 'メールアドレス' %><br />
         <%= text_field_tag :email, params[:email] %>
       </div>
 
       <div class="field">
-        <%= label_tag :password, 'パスワード:' %>
+        <%= label_tag :password, 'パスワード' %><br />
         <%= password_field_tag :password, params[:password] %>
       </div>
 
-      <div class="field">
+      <div class="actions">
         <%= submit_tag "ログイン" %>
       </div>
     </fieldset>

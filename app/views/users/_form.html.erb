@@ -1,13 +1,12 @@
-
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -15,25 +14,25 @@
   <fieldset>
     <legend>ユーザ情報の入力</legend>
 
-  <div class="field">
-    <%= f.label :name, '名前' %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email, 'メールアドレス' %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password, 'パスワード' %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation, '確認' %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit '新規ユーザ登録' %>
-  </div>
+    <div class="field">
+      <%= f.label :name, '名前' %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :email, 'メールアドレス' %><br />
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :password, 'パスワード' %><br />
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation, '確認' %><br />
+      <%= f.password_field :password_confirmation %>
+    </div>
+    <div class="actions">
+      <%= f.submit '新規ユーザ登録' %>
+    </div>
 
   </fieldset>
 <% end %>
