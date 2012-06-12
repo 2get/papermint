@@ -7,6 +7,7 @@
           <li><%= link_to "ホーム", root_path %></li>
           <li><%= link_to "ヘルプ", help_path %></li>
           <% if signed_in? %>
+            <li>ようこそ、<%= current_user.name %>さん</li>
             <li><%= link_to "ログアウト", signout_path, method: "delete" %></li>
           <% else %>
             <li><%= link_to "ログイン", signin_path %></li>
