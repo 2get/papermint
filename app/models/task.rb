@@ -1,7 +1,9 @@
 class Task < ActiveRecord::Base
-  attr_accessible :content, :limit_date, :priority, :user_id
-
+  attr_accessible :content, :limit_date, :priority
   belongs_to :user
 
-  validates :content, :length => { :maximum => 255 }
+  validates :content, presence: true, :length => { :maximum => 255 }
+  validates :user_id, presence: true
+
+  default_scope order: 'tasks.created_at DESC'
 end
