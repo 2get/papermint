@@ -4,16 +4,19 @@ html {
   overflow-y: scroll;
 }
 
-body {
+/*body {
   padding-top: 60px;
-}
+}*/
 
-section {
+/*section {
  overflow: auto;
+}*/
+
+.container {
+  padding-top: 120px;
 }
 
-
-#logo {
+/*#logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7e,;
@@ -28,7 +31,7 @@ section {
 #logo:hover {
   color: #fff;
   text-decoration: none;
-}
+}*/
 
 .pri1 {
   /*background-color: #cd2c24;*/
