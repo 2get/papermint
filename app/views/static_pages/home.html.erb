@@ -31,6 +31,20 @@
 
 <script>
   $(document).ready(function() {
+    $('a[data-method="delete"]').live('ajax:success', function(e, data, status, xhr) {
+      $('#' + data.task.id).fadeOut('slow');
+    });
+    $(".todo").dblclick(function () {
+      var task_id = $(this).attr("id");
+      $.ajax({
+        type: "DELETE",
+        url: "/tasks/" + task_id,
+        data: "data-method=delete&data-remote&true",
+        success: function(data) {
+          $('#' + data.task.id).fadeOut('slow');
+        }
+      });
+    });
     $("#task_content").bind("click blur keydown keyup keypass change", function() {
       var inputText = $(this).val();
       $("#todo-prev p").html(inputText);

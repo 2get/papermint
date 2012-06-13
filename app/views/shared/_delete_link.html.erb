@@ -1,0 +1,7 @@
+<% if current_user?(object.user) %>
+  <%= link_to "完了", object,
+      method: :delete,
+      confirm: '完了していいですか',
+      title: object.content,
+      remote: true %>
+<% end %>
