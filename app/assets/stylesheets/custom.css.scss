@@ -1,0 +1,59 @@
+@import "bootstrap";
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+ overflow: auto;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7e,;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.pri1 {
+  background-color: #cd2c24;
+}
+
+.pri2 {
+  background-color: #f2594b;
+}
+
+.pri3 {
+  background-color: #f2836b;
+}
+
+.pri4 {
+  background-color: #f2e1ac;
+}
+
+.the-todos {
+  margin: 10px;
+  list-style: none;
+}
+
+.the-todos > li {
+  margin-left: 0;
+}
+
+.the-todos > li {
+  margin-bottom: 18px;
+}
