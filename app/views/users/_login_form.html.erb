@@ -1,4 +1,5 @@
-<div class="login_form">
+<div class="contents">
+ <div class="login_form">
   <% if flash[:alert] %>
     <p id="notice"><%= flash[:alert] %></p>
   <% end %>
@@ -6,21 +7,22 @@
 
   <%= form_tag sessions_path do %>
     <fieldset>
-      <legend>ログインしてください</legend>
+      <legend>ログイン</legend>
 
       <div class="field">
-        <%= label_tag :email, 'メールアドレス' %><br />
-        <%= text_field_tag :email, params[:email] %>
+        <%= label_tag :email, 'メールアドレス' %>
+        <%= text_field_tag :email, params[:email], options = {:placeholder => 'メールアドレス' } %>
       </div>
 
       <div class="field">
-        <%= label_tag :password, 'パスワード' %><br />
-        <%= password_field_tag :password, params[:password] %>
+        <%= label_tag :password, 'パスワード' %>
+        <%= password_field_tag :password, params[:password] , options = {:placeholder => 'パスワード' } %>
       </div>
 
-      <div class="actions">
+      <div class="field">
         <%= submit_tag "ログイン" %>
       </div>
     </fieldset>
   <% end %>
+ </div>
 </div>

@@ -1,19 +1,18 @@
 <header class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "PAPER MINT", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "ホーム", root_path %></li>
-          <li><%= link_to "ヘルプ", help_path %></li>
+  <div id="header">
+   <img src="/assets/logo_01.gif" width="229" height="71">
+      <h1>paper mint</h1>
+        <ul class="menu">
+          <li><%= link_to "home", root_path %></li><li>|</li>
+          <li><%= link_to "ヘルプ", help_path %></li><li> |</li>
           <% if signed_in? %>
-            <li>ようこそ、<%= current_user.name %>さん</li>
+            <li>ようこそ、<%= current_user.name %>さん</li><li>|</li>
             <li><%= link_to "ログアウト", signout_path, method: "delete" %></li>
           <% else %>
             <li><%= link_to "ログイン", signin_path %></li>
           <% end %>
         </ul>
-      </nav>
-    </div>
+   <div id="comment">
+  <img src="/assets/comment_01.gif" width="360" height="63"></div>
   </div>
 </header>
