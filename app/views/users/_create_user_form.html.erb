@@ -13,28 +13,29 @@
   <% end %>
 
   <fieldset>
-    <legend>ユーザ情報の入力</legend>
+    <legend>新規登録</legend>
 
     <div class="field">
-      <%= f.label :name, '名前' %><br />
-      <%= f.text_field :name %>
+      <%= f.label :name, '名前' %>
+      <%= f.text_field :name , options = {:placeholder => 'ユーザー名' } %>
     </div>
     <div class="field">
-      <%= f.label :email, 'メールアドレス' %><br />
-      <%= f.text_field :email %>
+      <%= f.label :email, 'メールアドレス' %>
+      <%= f.text_field :email , options = {:placeholder => 'メールアドレス' } %>
     </div>
     <div class="field">
-      <%= f.label :password, 'パスワード' %><br />
-      <%= f.password_field :password %>
+      <%= f.label :password, 'パスワード' %>
+      <%= f.password_field :password , options = {:placeholder => 'パスワード' } %>
     </div>
     <div class="field">
-      <%= f.label :password_confirmation, '確認' %><br />
-      <%= f.password_field :password_confirmation %>
+      <%= f.label :password_confirmation, '確認' %>
+      <%= f.password_field :password_confirmation , options = {:placeholder => 'パスワードの確認' } %>
     </div>
-    <div class="actions">
+    <div class="field">
       <%= f.submit '新規登録' %>
     </div>
 
   </fieldset>
 <% end %>
+
 </div>
