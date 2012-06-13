@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       #session[:user_id] = user.id
       sign_in user
       #redirect_to admin_url
-      redirect_back_or user
+      #redirect_back_or user
+      redirect_back_or home_path
     else
       #redirect_to login_url, alert: "無効なユーザー／パスワードです"
       flash.now[:error] = "無効なメールアドレス／パスワードの組み合わせです"

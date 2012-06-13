@@ -50,7 +50,8 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = 'ようこそPAPER MINTへ!'
-      redirect_to @user
+      #redirect_to @user
+      redirect_to home_path
     else
       render action: 'new'
     end
