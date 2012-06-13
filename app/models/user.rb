@@ -12,6 +12,26 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
+  def feed
+    Task.from_tasks_priority_by(self, 4)
+  end
+
+  def feed_1
+    Task.from_tasks_priority_by(self, 1)
+  end
+
+  def feed_2
+    Task.from_tasks_priority_by(self, 2)
+  end
+
+  def feed_3
+    Task.from_tasks_priority_by(self, 3)
+  end
+
+  def feed_4
+    Task.from_tasks_priority_by(self, 4)
+  end
+
   private
   def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64

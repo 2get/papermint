@@ -10,6 +10,14 @@ class Task < ActiveRecord::Base
   default_scope order: 'tasks.created_at DESC'
 
   def set_default_params
-    self.priority = self.priority || 0
+    self.priority = self.priority || 1
+  end
+
+  def self.from_tasks_priority_by(user, priority = nil)
+    if priority.nil?
+      where('user_id = ?', user.id)
+    else
+      where('user_id = ? and priority = ?', user.id, priority)
+    end
   end
 end

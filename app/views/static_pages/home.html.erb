@@ -4,9 +4,9 @@
 <section id="todo_post">
   <div class="row">
     <div class="span6">
-      <a href="#" class="thumbnail">
-        <img src="http://placehold.it/260x100" alt>
-      </a>
+      <div class="thumbnail">
+        <div id="todo-prev"><p>あたらしいToDoを作成する</p></div>
+      </div>
     </div>
     <div class="span6">
       <%= render 'shared/task_form' %>
@@ -16,81 +16,38 @@
 
 <section id="todos">
   <div class="row">
-    <div class="span3 pri1">
-      <ul class="the-todos">
-        <li>
-          <a href="#" class="thumbnail">
-            <%= image_tag("task_01.png") %>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="span3 pri2">
-      <ul class="the-todos">
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-      </ul>
+    <div class="span3 pri4">
+      <%= render 'shared/feed_4' %>
     </div>
     <div class="span3 pri3">
-      <ul class="the-todos">
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-      </ul>
+      <%= render 'shared/feed_3' %>
     </div>
-    <div class="span3 pri4">
-      <ul class="the-todos">
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x100" alt>
-          </a>
-        </li>
-      </ul>
+    <div class="span3 pri2">
+      <%= render 'shared/feed_2' %>
+    </div>
+    <div class="span3 pri1">
+      <%= render 'shared/feed_1' %>
     </div>
   </div>
 </section>
+
+<script>
+  $(document).ready(function() {
+    $("#task_content").bind("click blur keydown keyup keypass change", function() {
+      var inputText = $(this).val();
+      $("#todo-prev p").html(inputText);
+    });
+    $("#task_priority").change(function() {
+      var priority = parseInt($(this).val());
+      if (priority > 4) {
+         priority = 4;
+         $(this).val(priority);
+      } else if (priority < 1) {
+         priority = 1;
+         $(this).val(priority);
+      }
+      var task_image_url = "/assets/task_0" + priority + ".png";
+      $("#todo-prev").css("background-image", "url(" + task_image_url + ")");
+    });
+  });
+</script>
