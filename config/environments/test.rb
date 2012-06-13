@@ -37,6 +37,6 @@ Papermint::Application.configure do
 
   require 'bcrypt'
   silence_warnings do
-    BCrypy::Engine::DEFAULT_COST = BCrypt::Engine::MIN_COST
+    BCrypt::Engine::DEFAULT_COST = BCrypt::Engine::MIN_COST
   end
 end
