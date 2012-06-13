@@ -148,9 +148,14 @@ width:280px;
 	margin:52px 0px 0px 20px;
 }
 
+#comment{
+	width:680px;
+	margin:auto;
+}
+
 #comment img{
 	float: right;
-	margin:20px 30px 0px 0px;
+	margin:-80px 30px 0px 0px;
 }
 
 .menu {
