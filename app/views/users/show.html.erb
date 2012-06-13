@@ -10,11 +10,13 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <b>Password digest:</b>
-  <%= @user.password_digest %>
-</p>
-
+<% if @user.tasks.any? %>
+  <h3>ToDos (<%= @user.tasks.count %>)</h3>
+  <ol class="tasks">
+    <%= render @tasks %>
+  </ol>
+  <%= will_paginate @tasks %>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
