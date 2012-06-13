@@ -61,7 +61,8 @@ class TasksController < ApplicationController
     if @task.save
       #flash[:success] = 'TODOを作成しました!'
       #redirect_to root_path
-      redirect_to @task, notice: "TODOを作成しました"
+      #redirect_to @task, notice: "TODOを作成しました"
+      redirect_to home_path
     else
       #render root_path
       render action: "new"
