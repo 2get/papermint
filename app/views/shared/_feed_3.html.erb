@@ -1,0 +1,6 @@
+<% if @feed_items_3.any? %>
+  <ul class="the-todos">
+    <%= render partial: 'shared/feed_item', collection: @feed_items_3 %>
+  </ul>
+  <%= will_paginate @feed_items_3 %>
+<% end %>
