@@ -10,6 +10,7 @@ Papermint::Application.routes.draw do
 
   # static_pages
   match '/help',    to: 'static_pages#help'
+  match '/home',    to: 'static_pages#home'
 
   # users
   match '/signup',  to: 'users#new'

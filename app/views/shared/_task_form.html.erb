@@ -1,0 +1,10 @@
+<%= form_for @task, :html => {:class => "well form-horizontal"} do |f| %>
+  <fieldset>
+    <div class="input-append">
+      <%= f.text_field :content, placeholder: "ToDo", class: 'input-xlarge focused' %>
+      <%= f.number_field :priority %>
+      <%= f.datetime_select :limit_date, :include_blank => true, :use_month_numbers => true %>
+    </div>
+  </fieldset>
+  <%= f.submit '作成', class: 'btn' %>
+<% end %>
