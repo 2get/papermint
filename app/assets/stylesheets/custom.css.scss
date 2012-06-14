@@ -4,6 +4,10 @@ html {
   overflow-y: scroll;
 }
 
+.well {
+  padding: 19px 19px 0 19px;
+}
+
 /*body {
   padding-top: 60px;
 }*/
@@ -122,8 +126,30 @@ html {
   background-repeat: no-repeat;
 }
 
-.thumb_nail{
- display: block;
+.thumb_nail {
+  display: block;
   margin:50px 0px 0px 155px;
   border:none;
+}
+
+#submit3 {
+ position:relative;
+  top:-60px;
+  left:260px;
+  border: 0px;
+}
+
+.input-append {
+ margin:0px -5px;
+}
+
+input[type="text"],
+textarea {
+  width: 16em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.task_form_bg {
+  width:350px;
 }
