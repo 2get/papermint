@@ -15,19 +15,19 @@
   <fieldset>
     <legend>新規登録</legend>
 
-    <div class="field">
+    <div class="field" id="user_input">
       <%= f.label :name, '名前' %>
       <%= f.text_field :name , options = {:placeholder => 'ユーザー名' } %>
     </div>
-    <div class="field">
+    <div class="field" id="user_input">
       <%= f.label :email, 'メールアドレス' %>
       <%= f.text_field :email , options = {:placeholder => 'メールアドレス' } %>
     </div>
-    <div class="field">
+    <div class="field" id="user_input">
       <%= f.label :password, 'パスワード' %>
       <%= f.password_field :password , options = {:placeholder => 'パスワード' } %>
     </div>
-    <div class="field">
+    <div class="field" id="user_input">
       <%= f.label :password_confirmation, '確認' %>
       <%= f.password_field :password_confirmation , options = {:placeholder => 'パスワードの確認' } %>
     </div>
