@@ -6,7 +6,7 @@ html {
 
 .wall {
   padding: 28px 19px 0 24px;
-  margin: 0px 0px 0px 20px;
+  margin: 10px 0px 0px 20px;
   background-image:url(/assets/taskform_bg_02.gif);
   width:400px;
   height:165px;
@@ -177,7 +177,7 @@ html {
   width:400px;
   height:165px;
   background-repeat:no-repeat;
-  margin:18px 0px 0px 90px;
+  margin:28px 0px 0px 90px;
 }
 
 
@@ -201,5 +201,11 @@ textarea {
 
 .span6{
   width: 460px;
-  height: 210px;
+  height: 250px;
 }
+
+#comment2 img{
+ float: right;
+ margin:-20px 150px 0px 0px;
+}
+
