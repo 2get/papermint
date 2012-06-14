@@ -17,10 +17,14 @@ body {
   color: green; }
 
 
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table; }
+.field_with_errors > input[type="text"] {
+  border: 2px solid #b94a48 !important;
+}
+
+.field_with_errors > input[type="password"] {
+  border: 2px solid #b94a48 !important;
+}
+
 
 #error_explanation {
   width: 450px;
@@ -81,7 +85,6 @@ input{
     width: 16em;
 
 	}
-	
 input[type="text"],
 textarea {
 	border:2px solid #72e5e5;

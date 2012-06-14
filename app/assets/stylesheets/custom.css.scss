@@ -43,6 +43,11 @@ html {
   text-decoration: none;
 }*/
 
+.field_with_erros {
+  @extend .control-group;
+  @extend .error;
+}
+
 .pri1 {
   /*background-color: #cd2c24;*/
 }
