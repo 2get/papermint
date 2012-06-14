@@ -30,6 +30,18 @@
 </section>
 
 <script>
+  function setPrevImageFromPriority(priority_v) {
+    var priority = parseInt(priority_v);
+      if (priority > 4) {
+         priority = 4;
+         $("#task_priority").val(priority);
+      } else if (priority < 1) {
+         priority = 1;
+         $("#task_priority").val(priority);
+      }
+      var task_image_url = "/assets/task_0" + priority + ".png";
+      $("#todo-prev").css("background-image", "url(" + task_image_url + ")");
+  }
   $(document).ready(function() {
     $('a[data-method="delete"]').live('ajax:success', function(e, data, status, xhr) {
       $('#' + data.task.id).fadeOut('slow');
@@ -48,18 +60,10 @@
     $("#task_content").bind("click blur keydown keyup keypass change", function() {
       var inputText = $(this).val();
       $("#todo-prev p").html(inputText);
+      setPrevImageFromPriority($("#task_priority").val())
     });
     $("#task_priority").change(function() {
-      var priority = parseInt($(this).val());
-      if (priority > 4) {
-         priority = 4;
-         $(this).val(priority);
-      } else if (priority < 1) {
-         priority = 1;
-         $(this).val(priority);
-      }
-      var task_image_url = "/assets/task_0" + priority + ".png";
-      $("#todo-prev").css("background-image", "url(" + task_image_url + ")");
+      setPrevImageFromPriority($(this).val());
     });
   });
 </script>
