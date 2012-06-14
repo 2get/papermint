@@ -5,11 +5,10 @@
         <ul class="menu">
           <% if signed_in? %>
             <li>ようこそ、<%= current_user.name %>さん</li><li>|</li>
-            <li><%= link_to "ログアウト", signout_path, method: "delete" %></li><li>|</li>
+            <li><%= link_to "ログアウト", signout_path, method: "delete" %></li>
           <% else %>
-            <li><%= link_to "ログイン", signin_path %></li><li>|</li>
+            <li><%= link_to "ログイン", signin_path %></li>
           <% end %>
-            <li><%= link_to "ヘルプ", help_path %></li>
         </ul>
   </div>
 </header>

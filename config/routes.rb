@@ -9,7 +9,7 @@ Papermint::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   # static_pages
-  match '/help',    to: 'static_pages#help'
+  #match '/help',    to: 'static_pages#help'
   match '/home',    to: 'static_pages#home'
 
   # users
