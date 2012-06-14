@@ -4,8 +4,12 @@ html {
   overflow-y: scroll;
 }
 
-.well {
-  padding: 27px 19px 0 19px;
+.wall {
+  padding: 40px 19px 0 19px;
+  background-image:url(/assets/taskform_bg.gif);
+  width:351px;
+  height:165px;
+  background-repeat:no-repeat;
 }
 
 /*body {
@@ -150,7 +154,7 @@ textarea {
   -webkit-border-radius: 5px;
 }
 
-.task_form_bg {
-  width:350px;
-  margin:5px 0px;
+.span6{
+  width: 460px;
+  height: 210px;
 }
