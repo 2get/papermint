@@ -12,6 +12,18 @@
 
 <script>
   $(function() {
-    $("#datepicker").datepicker();
+    $("#datepicker").datepicker({
+      showMonthAfterYear: true,
+      yearSuffix: "年",
+      dateFormat:"yy年mm月dd日",                                                                       //データ表示形式
+        dayNames:["日曜日","月曜日","火曜日","水曜日","木曜日","金曜日","土曜日"],                       //曜日名(dateFormatでDD指定時)
+        dayNamesMin:["日","月","火","水","木","金","土"],                                                //曜日名
+        dayNamesShort:["日曜","月曜","火曜","水曜","木曜","金曜","土曜"],　　　　　                      //曜日名(dateFormatでD指定時)
+        monthNames:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],　　　　 //月名
+        monthNamesShort:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],　　//月名(dateFormatでM指定時)
+        nextText:"次",
+        prefText:"前",
+        minDate:"-0d"   //選択できる日付の範囲(1y は、1年。1m は、1カ月。1w は、1週間。1d は、1日。)
+    });
   });
 </script>
