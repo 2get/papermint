@@ -4,27 +4,10 @@ class TasksController < ApplicationController
   before_filter :signed_in_user, only: [:create, :destroy]
   before_filter :correct_user, only: :destroy
 
-
-  # GET /tasks
-  # GET /tasks.json
-  #def index
-  #  @tasks = Task.all
-
-  #  respond_to do |format|
-  #    format.html # index.html.erb
-  #    format.json { render json: @tasks }
-  #  end
-  #end
-
   # GET /tasks/1
   # GET /tasks/1.json
   def show
     @task = Task.find(params[:id])
-
-    #respond_to do |format|
-    #  format.html # show.html.erb
-    #  format.json { render json: @task }
-    #end
     render json: { task: @task }
   end
 

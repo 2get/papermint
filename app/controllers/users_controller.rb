@@ -2,17 +2,6 @@
 class UsersController < ApplicationController
   before_filter :signed_in_user,
     only: [:index, :edit, :update, :destroy]
-  # GET /users
-  # GET /users.json
-  def index
-    # @users = User.all
-    @users = User.order(:name)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @users }
-    end
-  end
 
   # GET /users/1
   # GET /users/1.json
@@ -32,11 +21,6 @@ class UsersController < ApplicationController
   def new
     redirect_to home_path if signed_in?
     @user = User.new
-
-    #respond_to do |format|
-    #  format.html # new.html.erb
-    #  format.json { render json: @user }
-    #end
   end
 
   # GET /users/1/edit
@@ -50,21 +34,10 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = 'ようこそPAPER MINTへ!'
-      #redirect_to @user
-      redirect_to home_path
+       redirect_to home_path
     else
-      render action: 'new'
+      render action: "new"
     end
-    #respond_to do |format|
-    #  if @user.save
-    #    format.html { redirect_to users_url, notice: "ユーザ#{@user.name}を作成しました。" }
-    #    format.json { render json: @user, status: :created, location: @user }
-    #  else
-    #    format.html { render action: "new" }
-    #    format.json { render json: @user.errors, status: :unprocessable_entity }
-    #  end
-    #end
   end
 
   # PUT /users/1
