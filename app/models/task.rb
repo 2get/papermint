@@ -7,7 +7,7 @@ class Task < ActiveRecord::Base
   validates :content, presence: true, :length => { :maximum => 255 }
   validates :user_id, presence: true
 
-  default_scope order: 'tasks.created_at DESC'
+  default_scope order: 'tasks.created_at DESC, tasks.limit_date ASC'
 
   def set_default_params
     self.priority = self.priority || 1
