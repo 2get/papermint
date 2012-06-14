@@ -21,10 +21,11 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @task }
-    end
+    #respond_to do |format|
+    #  format.html # show.html.erb
+    #  format.json { render json: @task }
+    #end
+    render json: { task: @task }
   end
 
   # GET /tasks/new
