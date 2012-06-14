@@ -4,6 +4,7 @@
 }
 
 body {
+    font-family: Meiryo, Osaka, sans-serif;
 	background-color: #fff;
 	color: #333;
 	font-family: verdana, arial, helvetica, sans-serif;
@@ -122,6 +123,10 @@ padding:0px 40px;
 width:280px;
 }
 
+#user_input{
+height:28px;
+}
+
 #header{
 	width:680px;
 	height:108px;
@@ -136,7 +141,7 @@ width:280px;
 
 .create_user_form fieldset{
 	border:none;
-	padding:10px 0px 0px;
+	padding:28px 0px 0px;
 	margin:0px 0px 0px;
 }
 
@@ -155,7 +160,7 @@ width:280px;
 
 #comment img{
 	float: right;
-	margin:-55px 30px 0px 0px;
+	margin:-55px 25px 0px 0px;
 }
 
 .menu {
@@ -174,6 +179,7 @@ width:280px;
 
 .menu li a:hover{
 	color:#7fffd4;
+	background-color:#ffffff;
 }
 
 .menu li {
@@ -205,5 +211,5 @@ width:280px;
 
 #submit2{
 	position:relative;
-	top:-130px;
+	top:-110px;
 	left:280px;}
