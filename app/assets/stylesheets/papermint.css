@@ -194,7 +194,8 @@ height:28px;
 
 #copyright{
 	width:296px;
-	margin:10px auto 0px;
+	margin:20px auto;
+	padding:0px 48px 0px 0px;
 }
 
 #copyright p{
