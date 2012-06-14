@@ -1,7 +1,7 @@
 <%= form_for @task, :html => {:class => "wall form-horizontal"} do |f| %>
   <fieldset>
     <div class="input-append">
-      <%= f.text_field :content, placeholder: "ToDo", class: 'input-xlarge focused' %>
+      <%= f.text_field :content, placeholder: "なにを？", class: 'input-xlarge focused' %>
       <%= f.hidden_field :priority %>
       <div class="btn-toolbar">
         <div class="btn-group">
@@ -11,7 +11,7 @@
           <span id="pri1-click" class="pri-sel pri1-color">&nbsp;</span>
         </div>
       </div>
-      <%= f.text_field :limit_date, :id => 'datepicker', placeholder: "期日" %>
+      <%= f.text_field :limit_date, :id => 'datepicker', placeholder: "いつまでに？" %>
     </div>
   </fieldset>
   <div id="submit3">
@@ -39,7 +39,7 @@
         secondText:"秒",
         millisecText:"ミリ秒",
         currentText:"現在時刻",
-        closeText:"期日設定",
+        closeText:"設定",
         hourGrid: 6,
         minuteGrid: 10
     });
