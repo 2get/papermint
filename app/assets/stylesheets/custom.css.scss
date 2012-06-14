@@ -43,11 +43,6 @@ html {
   text-decoration: none;
 }*/
 
-.field_with_erros {
-  @extend .control-group;
-  @extend .error;
-}
-
 .pri1 {
   /*background-color: #cd2c24;*/
 }
@@ -206,11 +201,11 @@ textarea {
 
 .span6{
   width: 460px;
-  height: 250px;
+  height: 270px;
 }
 
 #comment2 img{
  float: right;
- margin:-20px 150px 0px 0px;
+ margin:-45px 5px 0px 0px;
 }
 
