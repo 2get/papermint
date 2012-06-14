@@ -79,6 +79,7 @@ html {
   display: inline-block;
   text-align: left;
   padding-right: 25px;
+  color: #444444;
 }
 
 .content {
@@ -92,6 +93,13 @@ html {
 .content > p {
   display: inline-block;
   text-align: left;
+  margin: 0;
+  padding: 0;
+  color: #444444;
+}
+
+.limit_date {
+  color: #909090;
 }
 
 .todo-pri4 {

@@ -1,6 +1,6 @@
 <li id="<%= feed_item.id %>" class="todo-pri<%= feed_item.priority %> todo">
   <div class="content">
-    <p><%= wrap feed_item.content %></p>
+    <p><%= wrap truncate(feed_item.content) %></p>
     <% if !feed_item.limit_date.nil? %>
       <div class="limit_date"><%= feed_item.limit_date.to_s(:jp) %>まで</div>
     <% end %>

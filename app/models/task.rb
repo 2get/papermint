@@ -4,7 +4,7 @@ class Task < ActiveRecord::Base
 
   after_initialize :set_default_params
 
-  validates :content, presence: true, :length => { :maximum => 255 }
+  validates :content, presence: true, :length => { :maximum => 45 }
   validates :user_id, presence: true
 
   default_scope order: 'tasks.created_at DESC, tasks.limit_date ASC'
