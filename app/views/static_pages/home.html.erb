@@ -34,10 +34,10 @@
     var priority = parseInt(priority_v);
       if (priority > 4) {
          priority = 4;
-         $(this).val(priority);
+         $("#task_priority").val(priority);
       } else if (priority < 1) {
          priority = 1;
-         $(this).val(priority);
+         $("#task_priority").val(priority);
       }
       var task_image_url = "/assets/task_0" + priority + ".png";
       $("#todo-prev").css("background-image", "url(" + task_image_url + ")");

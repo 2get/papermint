@@ -2,7 +2,7 @@
   <div class="content">
     <p><%= wrap feed_item.content %></p>
     <% if !feed_item.limit_date.nil? %>
-      <div class="limit_date"><%= feed_item.limit_date.to_s(:jp) %></div>
+      <div class="limit_date"><%= feed_item.limit_date.to_s(:jp) %>まで</div>
     <% end %>
   </div>
 </li>
