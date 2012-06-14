@@ -65,7 +65,8 @@ class TasksController < ApplicationController
       redirect_to home_path
     else
       #render root_path
-      render action: "new"
+      #render action: "new"
+      redirect_to home_path
     end
   end
 
