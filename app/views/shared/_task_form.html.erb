@@ -3,7 +3,7 @@
     <div class="input-append">
       <%= f.text_field :content, placeholder: "ToDo", class: 'input-xlarge focused' %>
       <%= f.number_field :priority %>
-      <%= f.text_field :limit_date, :id => 'datepicker' %>
+      <%= f.text_field :limit_date, :id => 'datepicker', placeholder: "期日" %>
     </div>
   </fieldset>
   <%= f.submit '作成', class: 'btn' %>
