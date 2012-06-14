@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @title = @user.name
     @tasks = @user.tasks.paginate(page: params[:page])
-    
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
@@ -30,12 +30,13 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.json
   def new
+    redirect_to home_path if signed_in?
     @user = User.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @user }
-    end
+    #respond_to do |format|
+    #  format.html # new.html.erb
+    #  format.json { render json: @user }
+    #end
   end
 
   # GET /users/1/edit
