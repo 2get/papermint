@@ -57,6 +57,36 @@ html {
   /*background-color: #f2e1ac;*/
 }
 
+.pri-sel {
+  border: 1px solid #72E5E5;
+  width: 54px;
+  height: 30px;
+  display: inline-block;
+}
+
+.pri-sel-hightlight {
+  border: 2px solid #72E5E5;
+  width: 54px;
+  height: 30px;
+  display: inline-block;
+}
+
+.pri1-color {
+  background-color: #f0ffff !important;
+}
+
+.pri2-color {
+  background-color: #d4ffd4 !important;
+}
+
+.pri3-color {
+  background-color: #c2fffa !important;
+}
+
+.pri4-color {
+  background-color: #91f0eb !important;
+}
+
 .the-todos {
   margin: 0;
   padding: 0;
@@ -108,6 +138,10 @@ html {
 
 .limit_date {
   color: #909090;
+}
+
+.btn-group {
+  padding-top: 10px;
 }
 
 .todo-pri4 {

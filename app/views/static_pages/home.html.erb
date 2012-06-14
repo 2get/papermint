@@ -43,6 +43,14 @@
       }
       var task_image_url = "/assets/task_0" + priority + ".png";
       $("#todo-prev").css("background-image", "url(" + task_image_url + ")");
+
+      // 選択された色の枠の太さを変える
+      for (var i = 1; i < 5; i++) {
+        $("#pri" + i + "-click").removeClass("pri-sel-hightlight");
+        $("#pri" + i + "-click").addClass("pri-sel");
+      }
+      $("#pri" + priority + "-click").removeClass("pri-sel");
+      $("#pri" + priority + "-click").addClass("pri-sel-hightlight");
   }
   $(document).ready(function() {
     $('a[data-method="delete"]').live('ajax:success', function(e, data, status, xhr) {
@@ -66,6 +74,22 @@
     });
     $("#task_priority").change(function() {
       setPrevImageFromPriority($(this).val());
+    });
+    $("#pri4-click").click(function() {
+      $("#task_priority").val(4);
+      setPrevImageFromPriority(4);
+    });
+    $("#pri3-click").click(function() {
+      $("#task_priority").val(3);
+      setPrevImageFromPriority(3);
+    });
+    $("#pri2-click").click(function() {
+      $("#task_priority").val(2);
+      setPrevImageFromPriority(2);
+    });
+    $("#pri1-click").click(function() {
+      $("#task_priority").val(1);
+      setPrevImageFromPriority(1);
     });
   });
 </script>

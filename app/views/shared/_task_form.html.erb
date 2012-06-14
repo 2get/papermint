@@ -2,7 +2,15 @@
   <fieldset>
     <div class="input-append">
       <%= f.text_field :content, placeholder: "ToDo", class: 'input-xlarge focused' %>
-      <%= f.number_field :priority %>
+      <%= f.hidden_field :priority %>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <span id="pri4-click" class="pri-sel pri4-color">&nbsp;</span>
+          <span id="pri3-click" class="pri-sel pri3-color">&nbsp;</span>
+          <span id="pri2-click" class="pri-sel pri2-color">&nbsp;</span>
+          <span id="pri1-click" class="pri-sel pri1-color">&nbsp;</span>
+        </div>
+      </div>
       <%= f.text_field :limit_date, :id => 'datepicker', placeholder: "期日" %>
     </div>
   </fieldset>
