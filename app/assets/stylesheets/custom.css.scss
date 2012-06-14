@@ -60,7 +60,6 @@ html {
   margin-bottom: 5px;
   width: 225px;
   height: 65px;
-  /*padding: 3px 18px;*/
 }
 
 #todo-prev {
@@ -69,10 +68,11 @@ html {
   width: 225px;
   height: 65px;
   /*padding: 3px 18px;*/
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  padding: 0 15px 0 15px;
 }
 
 #todo-prev p {
@@ -86,6 +86,7 @@ html {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  padding: 0 15px 0 15px;
 }
 .content > p {
   display: inline-block;

@@ -23,6 +23,9 @@
     <%= f.label :limit_date %><br />
     <%= f.datetime_select :limit_date %>
   </div>
+  <div class="field">
+    <%= f.text_field :limit_date, :class => 'text_field', id: 'datepicker' %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

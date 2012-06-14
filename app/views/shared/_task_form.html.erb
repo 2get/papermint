@@ -4,7 +4,14 @@
       <%= f.text_field :content, placeholder: "ToDo", class: 'input-xlarge focused' %>
       <%= f.number_field :priority %>
       <%= f.datetime_select :limit_date, :include_blank => true, :use_month_numbers => true %>
+      <%= f.text_field :limit_date, :id => 'datepicker' %>
     </div>
   </fieldset>
   <%= f.submit '作成', class: 'btn' %>
 <% end %>
+
+<script>
+  $(function() {
+    $("#datepicker").datepicker();
+  });
+</script>
