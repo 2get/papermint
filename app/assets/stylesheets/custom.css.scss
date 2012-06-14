@@ -5,9 +5,10 @@ html {
 }
 
 .wall {
-  padding: 30px 19px 0 19px;
-  background-image:url(/assets/taskform_bg.gif);
-  width:351px;
+  padding: 28px 19px 0 24px;
+  margin: 0px 0px 0px 20px;
+  background-image:url(/assets/taskform_bg_02.gif);
+  width:400px;
   height:165px;
   background-repeat:no-repeat;
 }
@@ -167,14 +168,23 @@ html {
 
 .thumb_nail {
   display: block;
-  margin:55px 0px 0px 155px;
+  margin:50px 0px 0px 65px;
   border:none;
 }
+
+.span7 {
+  background-image:url(/assets/taskform_bg.gif);
+  width:400px;
+  height:165px;
+  background-repeat:no-repeat;
+  margin:18px 0px 0px 90px;
+}
+
 
 #submit3 {
  position:relative;
   top:-72px;
-  left:260px;
+  left:255px;
   border: 0px;
 }
 
