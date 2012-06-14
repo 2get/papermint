@@ -78,7 +78,6 @@ html {
 #todo-prev p {
   display: inline-block;
   text-align: left;
-  padding-right: 25px;
 }
 
 .content {
@@ -122,12 +121,23 @@ html {
 
 #submit3{
  position:relative;
-  top:-65px;
-  left:300px;
+  top:-60px;
+  left:260px;
   border: 0px;
 }
 
 .input-append{
- width: 16em;
+ margin:0px -5px;
 }
 
+input[type="text"],
+textarea {
+ width: 16em;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+
+.task_form_bg{
+ width:350px;
+
+}
