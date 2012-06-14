@@ -4,8 +4,8 @@ Papermint::Application.routes.draw do
   #get "static_pages/home"
   #get "static_pages/help"
 
-  resources :tasks
-  resources :users
+  resources :tasks, only: [:new, :create, :destroy]
+  resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
 
   # static_pages
