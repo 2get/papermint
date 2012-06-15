@@ -4,7 +4,7 @@ class Task < ActiveRecord::Base
 
   after_initialize :set_default_params
 
-  validates :content, presence: true, :length => { :maximum => 45 }
+  validates :content, presence: true, length: { maximum: 45 }
   validates :user_id, presence: true
 
   default_scope order: 'tasks.limit_date is null ASC, tasks.limit_date ASC,  tasks.created_at DESC'
@@ -15,9 +15,9 @@ class Task < ActiveRecord::Base
 
   def self.from_tasks_priority_by(user, priority = nil)
     if priority.nil?
-      where('user_id = ?', user.id)
+      where(user_id: user.id)
     else
-      where('user_id = ? and priority = ?', user.id, priority)
+      where(user_id: user.id, priority: priority)
     end
   end
 end

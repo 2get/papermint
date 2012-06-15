@@ -1,14 +1,13 @@
+# -*- coding: utf-8 -*-
 Papermint::Application.routes.draw do
   root to: 'users#new'
-  #root to: 'static_pages#home'
-  #get "static_pages/home"
-  #get "static_pages/help"
 
   resources :tasks, only: [:create, :destroy]
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
 
   # static_pages
+  # ヘルプ用意できないので外す
   #match '/help',    to: 'static_pages#help'
   match '/home',    to: 'static_pages#home'
 
