@@ -1,6 +1,6 @@
 <% if signed_in? %>
 <section id="todo_post">
-<div id="now">2012/06/15(fri)10:00</div>
+<div id="now"></div>
   <div class="row">
     <div class="span6">
     <div class="span7">
@@ -41,6 +41,30 @@
 </section>
 
 <script>
+  // 現在時刻取得して表示フォーマットで出力
+  function getCurrentDatetime() {
+    var weeks = new Array('sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat');
+    var d = new Date();
+    var month = d.getMonth() + 1;
+    var day = d.getDate();
+    var week = weeks[d.getDay()];
+    var hour = d.getHours();
+    var minute = d.getMinutes();
+    var second = d.getSeconds();
+
+    if (month < 10) { month = "0" + month; }
+    if (day < 10) { day = "0" + day; }
+    if (hour < 10) { hour = "0" + hour; }
+    if (minute < 10) { minute = "0" + minute; }
+    if (second < 10) { second = "0" + second; }
+
+    return d.getFullYear() + "/" + month + "/" + day + "(" + week + ")" + hour + ":" + minute;
+  }
+
+  function setCurrentDatetime() {
+    $("#now").html(getCurrentDatetime());
+  }
+
   function setPrevImageFromPriority(priority_value) {
     var priority = parseInt(priority_value);
       if (priority > 4) {
@@ -62,6 +86,9 @@
       $("#pri" + priority + "-click").addClass("pri-sel-hightlight");
   }
   $(document).ready(function() {
+    setCurrentDatetime();
+    setInterval("setCurrentDatetime()", 5000);  // 現在時刻を5秒ごとに取得表示 分までなので
+
     $('a[data-method="delete"]').live('ajax:success', function(e, data, status, xhr) {
       $('#' + data.task.id).fadeOut('slow');
     });
