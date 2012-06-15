@@ -13,52 +13,6 @@ html {
   background-repeat:no-repeat;
 }
 
-/*body {
-  padding-top: 60px;
-  letter-spacing:5%;
-}*/
-
-/*section {
- overflow: auto;
-}*/
-
-.container {
-  padding-top: 120px;
-}
-
-/*#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7e,;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-}
-
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
-}*/
-
-.pri1 {
-  /*background-color: #cd2c24;*/
-}
-
-.pri2 {
-  /*background-color: #f2594b;*/
-}
-
-.pri3 {
-  /*background-color: #f2836b;*/
-}
-
-.pri4 {
-  /*background-color: #f2e1ac;*/
-}
-
 .pri-sel {
   border: 2px solid #72E5E5;
   width: 52px;
@@ -214,4 +168,9 @@ textarea {
  margin:-35px 190px 0px 0px;
  color:#708090;
 }
+
+.navbar-fixed-top {
+  position: static;
+}
+
 
